@@ -499,6 +499,7 @@ transform: translate(0px,500px);
 -o-transform: translate(0px,500px);
 -ms-transform: translate(0px,500px);
 }
+
 .list_case , .list_case li{float:left;}
 .list_case{}
 .wrap_case .focus {}
