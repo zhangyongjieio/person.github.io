@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		window.onload=function(){
+			let one=document.querySelector('.one');
+			let two=document.querySelector('.two');
+			
+			one.onmouseover=function(){
+				two.style.display='block';
+			}
+			one.onmouseout=function(){
+				two.style.display='none';
+			}
+		}
+	</script>
+	<style>
+		.one{
+			width:100px;
+			height:100px;
+			background:red;
+		}
+		.two{
+			width:200px;
+			height:200px;
+			background:red;
+			margin-top:20px;
+			display:none;
+		}
+	</style>
+	<body>
+		<div class="one">
+			1
+		</div>
+		<div  class="two">
+			2222
+		</div>
+	</body>
+</html>
