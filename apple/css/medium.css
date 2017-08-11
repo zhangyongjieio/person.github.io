@@ -1,0 +1,391 @@
+@import url("index.css");
+/*中屏*/
+@media only screen and (min-width: 735px) and (max-width: 1068px) {
+	body{
+		background: #F2F2F2;
+	}
+	/*头部开始*/
+	header{
+		width: 100%;
+		height: 500px;
+		position: relative;
+		overflow: hidden;
+	}
+	/*导航*/
+	header nav.small-srceen{
+		display: none;
+	}
+	header nav.big-srceen{
+		width: 100%;
+		height: 44px;
+		background: #313131;
+		text-align: center;
+		line-height: 44px;
+		position: absolute;
+		left:0;
+		top: 0;
+		z-index: 330000;
+	}
+	header nav.big-srceen .ul {
+		width: 100%;
+		height: 100%;
+		/*background: red;*/
+		margin: 0 auto;
+		text-align: justify;
+	}
+	header nav.big-srceen .ul::after{
+		content: "";
+		width: 100%;
+		display: inline-block;
+	}
+	header nav.big-srceen .ul a{
+		display: inline-block;
+		color: #fff;
+		font-family: "iconfont";
+	}
+	header nav.big-srceen .ul a:hover{
+		color:#d0d0d0;
+	}
+	/*banner*/
+		.banner{
+		width: 100%;
+		height: 100%;
+	}
+	.banner > li a{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	.banner > li.img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		background-size:contain;
+		background-repeat: no-repeat;
+		display: none;
+	}
+	.banner > li:first-child{
+		background-image: url("../img/iphone_alt_medium.jpg");
+		background-color: #0A0A0A;
+		background-position: center center;
+		/*z-index: 2;*/
+		left: 0;
+	}
+	.banner > li:nth-child(2){
+		background-image: url("../img/macbookpro_medium.jpg");
+		background-color: #fff;
+		background-position: center bottom;
+		/*z-index: 3;*/
+		left: 0;
+	}
+	.banner > li:nth-child(3){
+		background-image: url("../img/watch_alt_medium.jpg");
+		background-color: #F2F2F2;
+		background-position: center center;
+		left: 0;
+	}
+	/*手机的字*/
+	.banner > li:nth-child(1) > a > h3{
+		margin-top: 60px;
+		font-size: 28px;
+		color: #fff;
+		text-align: center;
+	} 
+	.banner > li:nth-child(1) > a > h2{
+		font-size: 40px;
+		color: #fff;
+		text-align: center;
+	}
+	/*表的字*/
+	.banner > li:nth-child(3) > a > h2{
+		position: absolute;
+		left: 39%;
+		top:83%;
+		font-size: 40px;
+		color: #000;
+	}
+	.banner > li:nth-child(3) > a > img{
+		position: absolute;
+		left: 43%;
+		top:11%;
+	}
+	/*电脑的字*/
+	.banner > li:nth-child(2) > a > h3{
+		text-align: center;
+		margin-top:100px;
+		font-size: 26px;
+		color: #000;
+	} 
+	.banner > li:nth-child(2) > a > h2{
+		text-align: center;
+		font-size: 30px;
+		color: #000;
+	}
+		/*图片*/
+	.img-box{
+		width: 100%;
+		height: auto;
+		/*background: red;*/
+		overflow: hidden;
+	}
+	.img-box li{
+		width: 50%;
+		height: 200px;
+		float: left;
+		box-sizing: border-box;
+		border: 4px solid #fff;
+	}
+	.img-box li > a{
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+	}
+	.img-box > li:first-child{
+		background:url(../img/accessories_medium.jpg) center center no-repeat ;
+	}
+	.img-box > li:nth-child(2){
+		background:url(../img/ipad_pro_medium.jpg) center center no-repeat ;
+	}
+	.img-box > li:nth-child(3){
+		background:url(../img/airpods_medium.jpg) center center no-repeat ;
+	}
+	.img-box > li:nth-child(4){
+		background:url(../img/iphone_upgrade_medium.jpg) center center no-repeat ;
+	}
+
+
+
+	/*左右箭头*/
+	.banner > .left,.banner > .right{
+		width: 20%;
+		height: 100%;
+		background: rgba(0,0,0,0);
+		cursor: pointer;
+		position: absolute;
+		top:0;
+		z-index: 700;
+	}
+	.banner > .left{
+		left: 0;
+	}
+	.banner > .right{
+		right: 0;
+	}
+	.banner > .left > div,.banner > .right > div{
+		width: 64px;
+		height: 64px;
+		background: rgba(180,180,180,0.25);
+		border-radius: 50%;
+		text-align: center;
+		font-size: 30px;
+		font-family: '宋体';
+		color: rgba(0,0,0,0.44);
+		line-height: 64px;
+		display: none;
+		cursor: pointer;
+		position: absolute;
+		top:43%;
+	}
+	.banner > .left > div{
+		/*margin-left: 2%;*/
+		left: 10px;
+	}
+	.banner > .right > div{
+		right: 10px;
+		/*margin-left: 74%;*/
+	}
+	.banner > .left:hover div,.banner > .right:hover div{
+		display: block;
+	}
+	/*banner进度条*/
+	.banner > li.rect{
+		width: 210px;
+		height: 2px;
+		position: absolute;
+		top: 94%;
+		left: 50%;
+		margin-left: -105px;
+		z-index: 3000;
+	}
+	.banner > li.rect > div{
+		width: 50px;
+		height: 100%;
+		background:#E2E2E2;
+		float: left;
+		margin-left: 20px;
+	}
+	.banner > li.rect > div > div{
+		width: 0;
+		height: 100%;
+		background:#808080;
+	}
+	.banner > li.rect > div > div.actives{
+		animation: moveto 2s linear;
+	}
+
+	/*动画*/
+	@keyframes moveto {
+		0%{
+			width: 0;
+		}
+		100%{
+			width: 100%;
+		}
+	}
+
+
+
+	.banner > li.first{
+		display: block;
+	}
+	/*改变层级的类名*/
+	.zindex{
+		z-index: 200;
+	}
+	/*点击时给轮播点加的类名*/
+	.banner > li.rect > div > div.vasible{
+		background: #808080;
+		width: 100%;
+	}
+	/*轮播动画*/
+	/*向左走的轮播*/
+	.banner > li.now-out{
+		animation: now-out 1s linear;
+		display: block;
+	}
+	.banner > li.next-in{
+		animation: next-in 1s linear;
+		display: block;
+	}
+	/*向右走的轮播*/
+	.banner > li.now-in{
+		animation: now-in 1s linear forwards;
+		display: block;
+	}
+	.banner > li.next-out{
+		animation: next-out 1s linear;
+		display: block;
+	}
+	/*当前的从左边出去*/
+	@keyframes now-out {
+		0%{
+			transform: translateX(0) scale(1);
+		}
+		100%{
+			transform: translateX(-7%) scale(0.9);
+		}
+	}
+	/*下一张从右边进来*/
+	@keyframes next-in {
+		0%{
+			transform: translateX(100%);
+		}
+		100%{
+			transform: translateX(0);
+		}
+	}
+	/*当前的从右边出去*/
+	@keyframes now-in {
+		0%{
+			transform: translateX(0);
+		}
+		100%{
+			transform: translateX(100%);
+		}
+	}
+	/*下一张从左边的进来*/
+	@keyframes next-out {
+		0%{
+			transform: translateX(-7%) scale(0.9);
+		}
+		100%{
+			transform: translateX(0) scale(1);
+		}
+	}
+
+
+
+
+	/*底部*/
+	.bottom {
+		width:100%;
+		height: auto;
+		padding:0px 22px;
+		margin-left: 22px;
+		margin-right:22px ;
+		margin: 0 auto;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+	.bottom > p{
+		width:100%;
+		height: 30px;
+		font-size: 10px;
+		padding-bottom:6px;
+		padding-top:4px;
+		box-sizing: border-box;
+		color:#555555;
+		float: left;
+		margin-top: 6px;
+	}
+	.bottom > p:nth-of-type(1),.bottom > p:nth-of-type(2){
+		border-bottom: 1px solid #D6D6D6;
+		margin-bottom: 20px;
+	}
+
+	.bottom > div > div > div{
+		overflow: hidden;
+		font-size: 10px;
+		float: left;
+		width: 20%;
+		margin-top: 6px;
+		margin: 0 auto;
+	}
+	.bottom > div > div > div > ul > li{
+		width: 100%;
+		height: 15px;
+		margin-bottom:6px ;
+		
+	}
+	.bottom > div > div > div > ul > li >a{
+		color:#555555;
+	}
+	.bottom > div > div > div > h4 ~h4{
+		margin-top:20px ;
+	}
+	
+	.bottom > p > a{
+		color: dodgerblue;
+	}
+	.bottom > p > a:hover{
+		text-decoration: underline;
+	}
+	
+	.bottom  >span{
+		float: left;
+		font-size: 10px;
+		color: #555555;
+	}
+	.bottom > a{
+		float: left;
+		font-size: 10px;
+		color: #000;
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.bottom > a:hover{
+		text-decoration: underline;
+	}
+	
+	.bottom > img,.bottom > a.chain{
+		float: right;
+	}
+	.bottom > a.chain{
+		margin-right: 30px;
+	}
+	.bottom > div > div > div > h4 > span{
+	display: none;
+	}
+}
